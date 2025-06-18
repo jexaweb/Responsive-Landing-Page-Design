@@ -1,0 +1,73 @@
+.header {
+  //   margin-top: 2rem;
+  //   margin-bottom: 2.1rem;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.navBr {
+  margin-left: auto;
+  display: flex;
+  gap: 2.2rem;
+}
+.navList {
+  display: flex;
+  margin-top: 1.5rem;
+  gap: 1.6rem;
+}
+.navLink {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1rem;
+  color: #4d4d4d;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.6rem;
+  text-decoration: none;
+}
+
+.navList a::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 50%;
+  background-color: #4caf4f;
+  bottom: 0;
+  left: -50%;
+  // transition: 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+a:hover::before {
+  left: 50%;
+}
+.navList a::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 50%;
+  background-color: #263238;
+  bottom: 0;
+  right: -50%;
+  // transition: 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.navList a:hover::before,
+.navList a:hover::after {
+  right: 50%;
+  transform: scaleX(1);
+}
+
+.nav__icons {
+  text-align: center;
+  padding-left: 0.4rem;
+}
